@@ -1,2 +1,0 @@
-# AWStest
-AWS test

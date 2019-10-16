@@ -15,8 +15,7 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
-      - GITHUB_PERSONAL_ACCESS_TOKEN=$(aws ssm get-parameter --name "ddCodeBuild" --with-decryption --query 'Parameter.Value')
-      - git clone https://$ENV{'GITHUB_PERSONAL_ACCESS_TOKEN'}\@github.com/dushyant8858/aws-nodejs-sample-codebuild.git
+      - git clone https://$(aws ssm get-parameter --name "ddCodeBuild" --with-decryption --query 'Parameter.Value' --region us-east-1 --output text)@github.com/dushyant8858/aws-nodejs-sample-codebuild.git
 
   build:
     commands:

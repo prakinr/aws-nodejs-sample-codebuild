@@ -13,9 +13,8 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
-      - export SERVER_KEY=prakin
-      - echo ${SERVER_KEY// /'\n'}
-      - echo ${SERVER_KEY// /'\n'}
+      - echo ${SERVER_KEY1// /'\n'}
+      - echo ${SERVER_KEY1// /'\n'}
 
   build:
     commands:

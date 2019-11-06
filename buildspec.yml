@@ -14,8 +14,8 @@ phases:
       - npm install
       - npm install unit.js
       - bash
-      - echo ${SERVER_KEY1// /'\n'}
-      - echo ${SERVER_KEY1// /'\n'}
+      - ${SERVER_KEY// /'\n'}
+      - ${SERVER_KEY// /'\n'}
 
   build:
     commands:

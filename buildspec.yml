@@ -13,6 +13,8 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
+      - export SERVER_KEY="a b c"
+      - set -a
       - cat /codebuild/output/tmp/script.sh
       - echo $SERVER_KEY | tr [:space:] "\n"
       - cat /codebuild/output/tmp/dir.txt

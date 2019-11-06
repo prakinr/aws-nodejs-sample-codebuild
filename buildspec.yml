@@ -16,6 +16,7 @@ phases:
       - cat /codebuild/output/tmp/script.sh
       - echo $SERVER_KEY | tr [:space:] "\n"
       - cat /codebuild/output/tmp/dir.txt
+      - cat /codebuild/output/tmp/env.sh 
       - echo ${SERVER_KEY// /'\n'}
       
      

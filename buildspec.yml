@@ -15,8 +15,7 @@ phases:
       - npm install unit.js
       - cat /codebuild/output/tmp/script.sh
       - echo $SERVER_KEY | tr [:space:] "\n"
-      - echo ${#SERVER_KEY}
-      - echo ${SERVER_KEY\/i\/a}
+      - echo ${SERVER_KEY// /'\n'}
       
      
   build:

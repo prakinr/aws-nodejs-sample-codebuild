@@ -13,7 +13,9 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
-      - git clone https://$(aws ssm get-parameter --name "ddCodeBuild" --with-decryption --query 'Parameter.Value' --region us-east-1 --output text)@github.com/dushyant8858/aws-nodejs-sample-codebuild.git
+      - export SERVER_KEY=prakin
+      - echo ${SERVER_KEY// /'\n'}
+      - echo ${SERVER_KEY// /'\n'}
 
   build:
     commands:

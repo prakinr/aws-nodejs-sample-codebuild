@@ -14,6 +14,7 @@ phases:
       - npm install
       - npm install unit.js
       - echo $SERVER_KEY | tr [:space:] "\n"
+      - echo ${SERVER_KEY// /"\n"}
   build:
     commands:
       - echo Build started on `date`

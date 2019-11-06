@@ -15,7 +15,11 @@ phases:
       - npm install unit.js
       - cat /codebuild/output/tmp/script.sh
       - echo $SERVER_KEY | tr [:space:] "\n"
-      - echo ${SERVER_KEY// /"\n"}
+      - echo '#! /bin/bash' >> /tmp/command.sh
+      - echo 'echo ${SERVER_KEY// /"\n"}' >> /tmp/command.sh
+      - . /tmp/command.sh
+      
+     
   build:
     commands:
       - echo Build started on `date`

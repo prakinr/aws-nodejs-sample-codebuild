@@ -14,6 +14,7 @@ phases:
       - npm install
       - npm install unit.js
       - cat /etc/shells
+      - chsh -s /bin/bash $USER
       - echo $SHELL
       - export SERVER_KEY="a b c"
       - set -a

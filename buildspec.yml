@@ -8,6 +8,7 @@ phases:
     commands:
       - echo Installing Mocha...
       - npm install -g mocha
+      - echo $WOW
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
@@ -23,6 +24,7 @@ phases:
       - cat /codebuild/output/tmp/dir.txt
       - cat /codebuild/output/tmp/env.sh 
       - echo ${SERVER_KEY// /'\n'}
+      - echo $WOW
       
      
   build:
@@ -30,9 +32,11 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - mocha test.js
+      - echo $WOW
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo $WOW
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.

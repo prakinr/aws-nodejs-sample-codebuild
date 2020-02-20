@@ -26,6 +26,7 @@ phases:
       - echo ${SERVER_KEY// /'\n'}
       - echo $WOW
       - echo $WOW
+      - echo $NICE
       
      
   build:

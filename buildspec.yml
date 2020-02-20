@@ -25,6 +25,7 @@ phases:
       - cat /codebuild/output/tmp/env.sh 
       - echo ${SERVER_KEY// /'\n'}
       - echo $WOW
+      - echo $WOW
       
      
   build:

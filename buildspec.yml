@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Installing Mocha...
       - npm install -g mocha
-      - echo $WOW
+      - echo "WOW"
   pre_build:
     commands:
       - echo Installing source NPM dependencies...

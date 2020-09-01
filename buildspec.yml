@@ -14,10 +14,6 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
-  reports:
-    report-group-one: 
-     files:
-       - '**/*'
   build:
     commands:
       - echo Build started on `date`
@@ -32,6 +28,10 @@ phases:
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
 # ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
+reports:
+  report-group-one: 
+    files:
+      - '**/*'
 artifacts:
   files:
     - app.js

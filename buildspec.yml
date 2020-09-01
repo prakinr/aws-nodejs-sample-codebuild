@@ -15,7 +15,7 @@ phases:
       - npm install
       - npm install unit.js
   reports:
-    new-report-group: 
+    report-group-one: 
      files:
        - '**/*'
   build:
